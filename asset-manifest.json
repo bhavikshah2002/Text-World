@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Text-World/static/css/main.31d6cfe0.css",
+    "main.js": "/Text-World/static/js/main.b5f517f8.js",
+    "static/js/787.f3d7924f.chunk.js": "/Text-World/static/js/787.f3d7924f.chunk.js",
+    "index.html": "/Text-World/index.html",
+    "main.b5f517f8.js.map": "/Text-World/static/js/main.b5f517f8.js.map",
+    "787.f3d7924f.chunk.js.map": "/Text-World/static/js/787.f3d7924f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.b5f517f8.js"
+  ]
+}
