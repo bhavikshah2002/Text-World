@@ -3,6 +3,12 @@ import Nav from './components/Nav.js';
 import TextForm from './components/TextForm.js';
 import Alert from './components/Alert.js';
 import React, { useState } from 'react';
+import About from './components/About.js';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 
 function App() {
@@ -31,44 +37,38 @@ function App() {
     },1500);
   }
   return (
-    <>
-
-    
+      <>
+  
+      <Router>
       
     <Nav title="Text World"  home="Home" about="About Us" Dropdown='Contact Us' mode={Mode} toggleMode={toggleMode}/>
     < Alert alert={alert} />
-    <TextForm textarea="Enter The Text Below: " mode={Mode} showAlert={showAlert}/>
-       
-     
-   
-    
+     <Routes>
+       <Route exact path='/' element={<TextForm textarea="Enter The Text Below: " mode={Mode} showAlert={showAlert}/>}></Route>
+       <Route exact path='/about' element={< About mode={Mode} />}></Route>
+       {/* <Route exact path='/contact' element={< Contact />}></Route> */}
+     </Routes>
+    </Router>
+  
     </>
   );
 }
 
 export default App;
 
-// import About from './components/About.js';
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
 
 
 // return (
 //   <>
 
-//   <Router>
+  
     
 //   <Nav title="Text World"  home="Home" about="About Us" Dropdown='Contact Us' mode={Mode} toggleMode={toggleMode}/>
 //   < Alert alert={alert} />
-//    <Routes>
-//      <Route exact path='/' element={<TextForm textarea="Enter The Text Below: " mode={Mode} showAlert={showAlert}/>}></Route>
-//      <Route exact path='/about' element={< About  />}></Route>
-//      {/* <Route exact path='/contact' element={< Contact />}></Route> */}
-//    </Routes>
-//   </Router>
+//   <TextForm textarea="Enter The Text Below: " mode={Mode} showAlert={showAlert}/>
+     
+   
+ 
   
 //   </>
 // );
